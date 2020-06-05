@@ -1,0 +1,7 @@
+server/node_modules/
+server/db/offers.db
+server/public/
+ui/node_modules/
+.DS_Store/
+server/.DS_Store/
+ui/.DS_Store/

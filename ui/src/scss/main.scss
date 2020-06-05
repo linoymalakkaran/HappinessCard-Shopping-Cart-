@@ -1,0 +1,30 @@
+body {
+	margin: 0 !important;
+	padding: 0 !important;
+	cursor: default;
+}
+
+.show-block {
+	display: block !important;
+}
+.show-flex {
+	display: flex !important;
+}
+.hide {
+	display: none !important;
+}
+
+.container-div {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	position: relative;
+}
+
+@import "header/header";
+@import "header/navbar";
+@import "content/result";
+@import "footer/footer";
+@import "mobile-overlay/mobile-overlay";
+
+@import "content/admin";

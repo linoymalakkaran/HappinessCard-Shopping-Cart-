@@ -1,0 +1,27 @@
+<div id="header-slide" class="header-slide" 
+    [ngClass]="((documentScrollHeight > 200) || (searchKey))
+                        ?'header-slide hide':'header-slide'"
+    >
+    <div id="carousel-overlay" class="carousel-overlay
+					carousel-animation"
+                    *ngIf = "overlay_visibility"
+                [style.background-image]="getSanitizedBackgroundImageUrl()"></div>
+    <div class="carousel-button carousel-button-left">
+        <i class="fa fa-chevron-circle-left" aria-hidden="true" (click)="slideLeft($event);"></i>
+    </div>
+    <div class="carousel-message-container">
+        <div class="carousel-message">
+            <span>A best gift for your dear ones.</span>
+            <span>Happiness Card</span>
+        </div>
+        <div id="carousel-index" class="carousel-index">
+            <i *ngFor="let cIndex of carousel.images" class="fa fa-circle-o" 
+            [ngClass]="(carousel.images.indexOf(cIndex) === carousel.current)
+                        ?'fa fa-dot-circle-o':'fa fa-circle-o'" 
+                        aria-hidden="true" id="carousel-index-{{carousel.images.indexOf(cIndex)}}"></i>
+        </div>
+    </div>
+    <div class="carousel-button carousel-button-right">
+        <i class="fa fa-chevron-circle-right" aria-hidden="true" (click)="slideRight($event);"></i>
+    </div>
+</div>

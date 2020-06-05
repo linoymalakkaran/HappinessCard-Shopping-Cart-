@@ -1,0 +1,90 @@
+@media (max-width: 800px) {
+	.mobile-overlay {
+		position: absolute;
+		z-index: 1000;
+		left: 0; right: 0; top:0; bottom: 0;
+		height: 100%;
+		width: 100%;
+		background-color:rgba(224,224,224,0.5);
+		transition: width 500ms;
+
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+
+	.mobile-overlay-content {
+		height: 100%;
+		width: 80%;
+		background-color: #fff; 
+		z-index: 1400;
+
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+
+	.mobile-nav-bar {
+		
+		height: 70px;
+		width: 100%;
+		background-color: #92B9D9;
+
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: flex-start;
+		align-items: center;
+	}
+
+	.mobile-nav-bar i {
+		
+		font-size: 24px;
+		font-weight: bold;
+		margin-left: 20px;
+		color: #777;
+	}
+
+	.mobile-menu {
+		
+		width: 100%;
+		height: 80%;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+
+
+	.mobile-menu-container {
+		
+		height: 30px;
+		margin-top: 5px;
+		width: 100%;
+		background-color: #ddd;
+		
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: flex-start;
+		align-items: center;
+	}
+
+	.mobile-menu span {
+		
+		font-size: 14px;
+		font-weight: normal;
+		font-family: "Lucida Sans Unicode";
+		padding: 4px 16px;
+	}
+
+	.mobile-menu i {
+		
+		margin: 3px 5px;
+	}
+
+	.mobile-overlay-collapse {
+		
+		width: 0px !important;
+	}
+}

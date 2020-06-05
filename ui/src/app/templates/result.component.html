@@ -1,0 +1,43 @@
+<div id="result"
+	[ngClass]="(documentScrollHeight > 200) && (!filterArgs)
+                        ?'result result-with-fix-header':'result'">
+	<div id="search-result" class="search-result">
+		<div *ngFor="let o of (offers | offersFilter: filterArgs:categoryArgs)" 
+			class="offer-card" id="card-{{o.id}}"
+			(click)="flipCard($event, o.id)"
+			[ngClass] = "(o.flip)?'offer-card card-flipped':'offer-card'">
+			<div id="card-front-{{o.id}}" class="card-overlay card-front" 
+				[style.background-image]="getSanitizedBackgroundImageUrl(o.img)">
+			</div>
+			<div id="card-back-{{o.id}}" 
+				[ngClass]="(o.flip)?'card-content card-back':'card-content card-back hide'"
+				>
+				<div id="offer-title-bar" class="offer-title-bar">
+					<div class="offer-card-details-button-div">
+						<button class="offer-card-details-button" title="More options">
+										<i class="fa fa-bars" aria-hidden="true"></i>
+									</button>
+					</div>
+					<div class="offer-title-div">
+						<span class="offer-card-child offer-title">{{o.title}}</span>
+					</div>
+				</div>
+				<span class="offer-card-child offer-summary">Avail {{o.percent_off}}% off on all purchases.</span>
+				<div class="offer-card-child offer-card-buttons">
+					<button id="offer-card-favourite-button-{{o.id}}" 
+						class="offer-card-favourite-button">
+									<i (mouseover)="fullHeart($event)" 
+										(mouseout)="normalHeart($event)"
+										class="fa fa-heart-o" aria-hidden="true"></i>
+								</button>
+					<button id="offer-card-like-button-{{o.id}}" class="offer-card-like-button">
+									<i (mouseover)="fullLike($event)"
+										(mouseout)="normalLike($event)"
+										class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+								</button>
+					<button class="offer-card-likes-count">1</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,57 @@
+<div class="admin-div">
+
+    <div class="grid-control-bar">
+        <div class="grid-buttons-container">
+            <a [routerLink]="['/addoffer', -1]"><button type="button" class="btn btn-primary"
+                [disabled]="deactivate_add"
+                >Add new offer</button>
+            </a>
+            <a [routerLink]="['/addoffer', editID]">
+                <button type="button" class="btn btn-info"
+                [disabled]="deactivate_edit">Edit</button>
+            </a>
+            <button type="button" class="btn btn-danger"
+                [disabled]="deactivate_delete"
+                (click) = "deleteOffers()"
+                >Delete</button>
+        </div>
+    </div>
+    <div class="table-grid">
+        <div class="table-container-div">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th><input type="checkbox"
+                            [checked]="all_selected"
+                             (change)="selectAllOffers()"/></th>
+                        <th>Title</th>
+                        <th>Image</th>
+                        <th>Location</th>
+                        <th>Category</th>
+                        <th>Valid from</th>
+                        <th>Valid till</th>
+                        <th>% Off</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let offer of offers">
+                        <td><input type="checkbox"
+                            (change)="selectOffer(offer.id)" 
+                            [checked]="offer.selected"/></td>
+                        <td>{{offer.title}}</td>
+                        <td><img 
+        src="{{imgUrlPrefix}}/test_happinesscard/images?name={{offer.img}}&size=200x100"/></td>
+                        <td>{{offer.location}}</td>
+                        <td>{{offer.category}}</td>
+                        <td>{{offer.valid_from}}</td>
+                        <td>{{offer.valid_till}}</td>
+                        <td>{{offer.percent_off}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="grid-pagination">
+        <div class="pagination-buttons-container"></div>
+    </div>
+</div>

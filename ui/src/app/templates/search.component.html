@@ -1,0 +1,27 @@
+<div [ngClass]="(currentLink === 'home') ? 'search-container': 'search-container hide'">
+	<div [ngClass]="(focus) ? 'search-input-container search-input-container-expand'
+		:'search-input-container'">
+		<span class="search-icon"><i class="fa fa-search" aria-hidden="true"></i></span>
+		<input type="text" class="search-input form-input"
+			title="Search for offers by name, location and discount."
+			#searchfield
+			placeholder="Search for an offers" 
+			name="search"
+			(keyup) = "searchItems(searchfield.value)"
+		/>
+	</div>
+	<select class="select-category form-input"
+		(change)="searchCategory($event.target.value)">
+		<option value="" selected >Select category (optional)</option>
+		<option value="Travel">Travel</option>
+		<option value="Fashion">Fashion</option>
+		<option value="Automotive">Automotive</option>
+		<option value="Food and Drink" >Food &amp; Drink</option>
+		<option value="Education and Learning" >Education &amp; Learning</option>
+		<option value="Liesure">Liesure</option>
+		<option value="Mind and Body">Mind &amp; Body</option>
+		<option value="Services">Services</option>
+		<option value="Shopping">Shopping</option>
+		<option value="Tickets">Tickets</option>
+	</select>
+</div>

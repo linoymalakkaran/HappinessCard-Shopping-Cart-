@@ -1,0 +1,28 @@
+.logo-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+
+    width: 100%;
+}
+.epg-logo {
+	display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    height: 55px;
+    width: 50%;
+}
+
+.federal-logo {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    height: 55px;
+    width: 50%;
+}
+
+@media (max-width: 500px) {
+    
+}

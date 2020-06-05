@@ -1,0 +1,270 @@
+.result {
+	padding: 20px;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.search-result {
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.offer-card {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	
+	background-color: #fff;
+	
+}
+
+.result-with-fix-header {
+	margin: 500px 0px 0px 0px;
+}
+
+.offer-card {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: center;
+
+	width: 300px;
+	height: 180px;
+	position: relative;
+	padding: 5px;
+	border-radius: 10px;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+	margin: 60px 40px;
+
+	transition: transform 1s;
+	transform-style: preserve-3d;
+}
+
+.card-flipped {
+	transform: rotateY( 180deg );
+}
+
+.offer-card:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.offer-card-child {
+	display: flex;
+	flex-flow: row wrap;
+	flex-grow: 1;
+}
+
+.card-overlay {
+	display: flex;
+	position: absolute;
+	left: 0; right: 0; top:0; bottom: 0;
+	height: 100%;
+	width: 100%;
+	backface-visibility: hidden;
+}
+
+.card-content {
+	position: absolute;
+	left: 0; right: 0; top:0; bottom: 0;
+	height: 100%;
+	width: 100%;
+	border: 1px solid #ccc;
+	border-radius: 15px;
+	background-color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	font-family: 'Khula', sans-serif;
+
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.card-front {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.card-back {
+	transform: rotateY( 180deg );
+}
+
+.offer-title {
+	padding: 10px;
+	font-family: 'Khula', sans-serif;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.offer-summary {
+	
+}
+
+.offer-details {
+	
+}
+
+/* card buttons */
+
+.offer-card-buttons {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: flex-end;
+
+	height: 6px;
+	border-top: 1px solid;
+	width: 100%;
+	height: 20%;
+}
+
+.offer-card-buttons button {
+	padding: 5px;
+	font-weight: bold;
+	font-size: 16px;
+	background:none;
+    border:none;
+    outline: none;
+	cursor: pointer;
+
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.offer-card-buttons button:hover {
+	
+}
+
+.offer-card-like-button:hover {
+	color: #025CA6;
+	font-size: 22px;
+}
+
+.offer-card-likes-count {
+	padding-top:2px;
+}
+
+.offer-card-favourite-button:hover {
+	color: red;
+	font-size: 22px;
+}
+
+.offer-summary {
+	height: 60%;
+	padding-top: 10px;
+
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.offer-title-bar {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	border-bottom: 1px solid;
+	width: 100%;
+}
+
+.offer-title-div {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-items: center;
+
+	width: 90%;
+}
+
+.offer-title {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.offer-card-details-button-div {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	width: 10%;
+	height: 20%;
+
+	button {
+		padding: 5px !important;
+		font-weight: bold;
+		font-size: 16px;
+		background:none;
+	    border:none;
+	    outline: none;
+		cursor: pointer;
+	}
+
+	button:hover {
+		color: #444;
+	}
+}
+
+@media (max-width: 800px) {
+	.result-with-fix-header {
+		margin: 450px 0px 0px 0px;
+	}
+	.result {
+		padding: 10px;
+	}
+	.offer-card {
+		width: 220px;
+		height: 140px;
+		padding: 2px;
+		margin: 20px 30px;
+	}
+
+	.offer-card-buttons button {
+		padding: 4px !important;
+		font-weight: bold;
+		font-size: 14px;
+	}
+
+	.offer-card-like-button:hover {
+		color: #025CA6;
+		font-size: 16px;
+	}
+
+	.offer-card-favourite-button:hover {
+		color: red;
+		font-size: 16px;
+	}
+
+	.card-content {
+		font-size: 12px;
+	}
+
+	.offer-title {
+		padding: 5px;
+		font-size: 14px;
+	}
+}
+
+
+
+@media (max-width: 500px) {
+	.result-with-fix-header {
+		margin: 250px 0px 0px 0px;
+	}
+	.result {
+		padding: 5px;
+	}
+}

@@ -1,0 +1,160 @@
+.header-div {
+	margin: 0px;
+	padding: 0px;
+	box-shadow: 0px 3px 1px #B7BCB5;
+	
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+}
+
+.header-fixed {
+	width: 100%;
+	top:0;
+	position: fixed;
+	background-color: #fff;
+	z-index: 999;
+	transition: all 0.4s ease-in-out;
+}
+
+.header-slide {
+	height: 400px;
+  	display: flex;
+  	position: relative;
+  	flex-flow: row nowrap;
+  	justify-content: flex-start;
+  	align-items: flex-start;
+}
+
+.carousel-overlay {
+	display: flex;
+	z-index:-1000;
+	position: absolute;
+	left: 0; right: 0; top:0; bottom: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.carousel-animation {
+	background: url("/src/images/carousel/1.jpg");
+	background-repeat: no-repeat;
+  	background-position: center center;
+  	//background-size: contain;
+  	background-size: cover;
+
+  	opacity: 0;
+
+	animation-duration: 1s;
+	//animation-iteration-count: infinite;
+	//animation-direction: alternate-reverse;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+  	animation-name: bckgrnd_slide;
+}
+
+@keyframes bckgrnd_slide {
+  10% {
+   opacity: 0.1;
+  },
+  20% {
+  	opacity: 0.2;
+  },
+  30% {
+  	opacity: 0.3;
+  },
+  40% {
+  	opacity: 0.4;
+  },
+  100% {
+  	opacity: 1.0;
+  }
+}
+
+.carousel-button {
+	height: 390px;
+	width: 4%;
+	display: flex;
+	flex-flow : column nowrap;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	font-size: 42px;
+}
+
+.carousel-button i {
+	cursor: pointer;
+}
+
+.carousel-message-container {
+	height: 390px;
+	width: 92%;
+	display: flex;
+	flex-flow : column nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.carousel-message {
+	display: flex;
+	//padding: 40px;
+	height: 80%;
+	width: 100%;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.carousel-message span:nth-child(1) {
+	display: flex;
+	font-family: 'Khula', sans-serif;
+	color: #fff;
+	font-size: 48px;
+}
+
+.carousel-message span:nth-child(2) {
+	display: flex;
+	font-family: 'Great Vibes', cursive;
+	color: #fff;
+	font-size: 72px;
+}
+
+.carousel-index {
+	display: flex;
+	height: 19%;
+	width: 100%;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.carousel-index i{
+	margin: 4px;
+	color: #fff;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+@media (max-width: 800px) {
+	.carousel-button {
+		width: 10%;
+		font-size: 24px;
+	}
+	.carousel-index i{
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 500px) {
+	.header-slide {
+		display: none;
+	}
+	.carousel-button {
+		width: 10%;
+		font-size: 24px;
+	}
+	.carousel-index i{
+		font-size: 14px;
+	}
+}

@@ -1,0 +1,20 @@
+<div [ngClass]="(showOverlay) ? 'mobile-overlay mobile-menu':
+    'mobile-overlay mobile-menu mobile-overlay-collapse'">
+  <div id="mobile-overlay-content" 
+    [ngClass]="(showOverlay) ? 'mobile-overlay-content':'mobile-overlay-content hide'">
+    <div id="mobile-nav-bar" class="mobile-nav-bar">
+      <i id="mobile-nav-bar-chevron" class="fa fa-chevron-left" aria-hidden="true" (click)="hideOverlay()" (touch)="hideOverlay()"></i>
+    </div>
+    <div id="mobile-menu" class="mobile-menu">
+      <div class="mobile-menu-container">
+        <span>Profile<i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+      </div>
+      <div class="mobile-menu-container">
+        <span>Membership<i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+      </div>
+      <div class="mobile-menu-container">
+        <span>FAQ<i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+      </div>
+    </div>
+  </div>
+</div>

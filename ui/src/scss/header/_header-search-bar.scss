@@ -1,0 +1,137 @@
+.search-container {
+	display: flex;
+	flex-flow : row nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
+}
+
+.header-text-container {
+	display: flex;
+	flex-flow : row nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	//border: 1px solid red;
+
+	width: 30%;
+}
+
+.header-text {
+	display: flex;
+	flex-flow : row nowrap;
+	justify-content: flex-start;
+	align-items: center;
+
+	//border: 1px solid red;
+	span {
+		font-size: 18px;
+		font-weight: bold;
+		font-family: 'Playfair Display SC', serif;
+	}
+}
+
+.search {
+	display: flex;
+	flex-flow : row nowrap;
+	justify-content: flex-start;
+	align-items: center;
+
+	width: 50%;
+	padding: 16px 4px;
+	//border: 1px solid blue;
+}
+
+.bars-icon {
+	display: none;
+}
+
+.nav-options {
+	width: 20%;
+	//border: 1px solid green;
+
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.nav-options ul {
+	display: flex;
+	list-style-type: none;
+	//margin: 8px;
+	padding: 0px;
+}
+
+.nav-options li {
+	display: inline;
+	margin: 8px 0px;
+	padding: 0px;
+	//border-right: 2px ridge #888;
+}
+/*
+.nav-options a {
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+	color: #175490;//#025CA6;
+	//padding: 4px 16px;
+	margin: 0px;
+	text-decoration: none;
+}
+
+.nav-options a i {
+	font-weight: normal !important;
+	color: #bbb;
+	//padding-left:6px;
+}
+
+.nav-options a:hover {
+	font-weight: 400 !important;
+	color: #66afe9;
+	//text-shadow: 0 0 10px #fff;
+	//border-bottom: 4px solid #92B9D9;
+}
+*/
+
+@media (max-width: 800px) {
+	.header-text-container {
+		width: 40%;
+	}
+	.search {
+		width: 60%;
+	}
+	.header-text {
+		width: 90%;
+		span {
+			font-size: 14px;
+			padding: 8px 10px;
+		}
+	}
+	.nav-options {
+		display: none;
+	}
+	.bars-icon {
+		width: 10%;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+
+	.bars-icon span {
+		display: flex;
+		cursor: pointer;
+	}
+}
+
+@media (max-width: 500px) {
+	.search {
+		justify-content: flex-start;
+		align-items: center;
+	}
+	.header-text-container {
+		width: 100%;
+	}
+	.search {
+		width: 98%;
+	}
+}
